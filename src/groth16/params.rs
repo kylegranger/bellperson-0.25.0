@@ -109,6 +109,7 @@ where
         checked: bool,
     ) -> io::Result<MappedParameters<E>> {
         let mut offset: usize = 0;
+        println!("asdf: build_mapped_parameters path {:?}", param_file_path.as_os_str());
         let param_file = File::open(&param_file_path)?;
         let params = unsafe { MmapOptions::new().map(&param_file)? };
 
