@@ -137,6 +137,5 @@ where
     E::G1Affine: gpu::GpuName,
     E::G2Affine: gpu::GpuName,
 {
-    println!("bell: in create_random_proof_batch_in_priority");
     create_random_proof_batch_priority::<E, C, R, P>(circuits, params, rng, true)
 }

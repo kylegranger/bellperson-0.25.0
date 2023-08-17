@@ -300,6 +300,7 @@ where
     let (start, mut provers, input_assignments, aux_assignments) =
         synthesize_circuits_batch(circuits)?;
 
+    info!("Done synthesize_circuits_batch");
     let worker = Worker::new();
     let input_len = input_assignments[0].len();
     let vk = params.get_vk(input_len)?.clone();
